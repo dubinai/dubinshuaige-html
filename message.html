@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板块 | 杜斌个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background: #050816;
+            color: #fff;
+        }
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050816;
+            z-index: -1;
+        }
+        nav {
+            width: 100%;
+            padding: 20px 5%;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .nav-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #409eff;
+        }
+        .nav-a a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .nav-a a:hover {
+            color: #409eff;
+            background: rgba(64,158,255,0.1);
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        h2 {
+            font-size: 36px;
+            color: #409eff;
+            margin-bottom: 30px;
+            border-left: 4px solid #409eff;
+            padding-left: 15px;
+        }
+        /* 替换成图片，和你其他页面风格一致 */
+        .top-tip {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            /* 用一张无版权、稳定加载的科技风图片 */
+            background: url(https://picsum.photos/id/180/1000/200) center/cover;
+            box-shadow: 0 8px 30px rgba(64,158,255,0.15);
+            position: relative;
+        }
+        /* 给图片加一层渐变遮罩，和文字更协调 */
+        .top-tip::after {
+            content: "留言交流区";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(5, 8, 22, 0.8), transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 20px;
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .msg-box {
+            background: rgba(255,255,255,0.05);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid rgba(64,158,255,0.2);
+        }
+        .msg-box p {
+            color: #b0b8c4;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(64,158,255,0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+        }
+        input:focus, textarea:focus {
+            border-color: #409eff;
+            box-shadow: 0 0 10px rgba(64,158,255,0.3);
+        }
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+        .submit-btn {
+            padding: 12px 40px;
+            background: #409eff;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(64,158,255,0.4);
+        }
+        /* 提交成功提示样式 */
+        .success-tip {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(72, 187, 120, 0.15);
+            border: 1px solid #48bb78;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            color: #48bb78;
+        }
+        footer {
+            margin-top: 80px;
+            padding: 30px 0;
+            text-align: center;
+            color: #888;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <nav>
+        <div class="nav-box">
+            <div class="logo">杜斌个人主页</div>
+            <div class="nav-a">
+                <a href="index.html">首页</a>
+                <a href="about.html">个人简介</a>
+                <a href="study.html">学习经历</a>
+                <a href="skill.html">专业技能</a>
+                <a href="project.html">项目作品</a>
+                <a href="honor.html">荣誉奖项</a>
+                <a href="life.html">生活日常</a>
+                <a href="message.html">留言板块</a>
+                <a href="contact.html">联系方式</a>
+                <a href="login.html">个人中心</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>留言板块</h2>
+        <div class="top-tip"></div>
+
+        <div class="msg-box">
+            <p>欢迎给我留言！填写内容后点击提交即可。</p>
+            <input type="text" id="nickname" placeholder="请输入昵称">
+            <input type="email" id="email" placeholder="请输入邮箱（选填）">
+            <textarea id="content" placeholder="请输入留言内容"></textarea>
+            <button class="submit-btn" onclick="checkForm()">提交留言</button>
+
+            <!-- 提交成功提示区域（默认隐藏） -->
+            <div class="success-tip" id="successTip">
+                🎉 留言提交成功！感谢你的反馈！
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 杜斌 个人主页 版权所有｜移动应用开发课程作业</footer>
+
+    <script>
+        function checkForm(){
+            let nick = document.getElementById("nickname").value.trim();
+            let cont = document.getElementById("content").value.trim();
+            let tip = document.getElementById("successTip");
+
+            // 简单表单校验
+            if(nick === ""){
+                alert("请输入昵称！");
+                return;
+            }
+            if(cont === ""){
+                alert("请输入留言内容！");
+                return;
+            }
+
+            // 显示页面内成功提示
+            tip.style.display = "block";
+
+            // 清空输入框
+            document.getElementById("nickname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("content").value = "";
+        }
+    </script>
+</body>
+</html>

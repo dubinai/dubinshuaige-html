@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业技能 | 杜斌个人主页</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft Yahei",sans-serif;}
+        body{background:#050816;color:#fff;}
+        .bg{position:fixed;top:0;left:0;width:100%;height:100%;background:url(https://picsum.photos/id/1048/1920/1080) center/cover;opacity:0.12;z-index:-1;}
+        nav{width:100%;padding:20px 5%;background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,0.1);position:sticky;top:0;z-index:99;}
+        .nav-box{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+        .logo{font-size:22px;font-weight:bold;color:#409eff;}
+        .nav-a a{color:#ccc;text-decoration:none;margin:0 10px;transition:0.3s;}
+        .nav-a a:hover{color:#409eff;}
+        .container{max-width:1000px;margin:0 auto;padding:60px 20px;}
+        h2{font-size:36px;color:#409eff;margin-bottom:30px;border-left:4px solid #409eff;padding-left:15px;}
+        .skill-top-img{width:100%;border-radius:12px;margin-bottom:30px;}
+        .skill-list{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+        .skill-item{background:rgba(255,255,255,0.05);padding:25px;border-radius:12px;border:1px solid rgba(64,158,255,0.2);transition:0.3s;}
+        .skill-item:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(64,158,255,0.15);}
+        h3{color:#67c2ff;margin-bottom:10px;}
+        p{color:#b0b8c4;line-height:1.8;}
+        @media (max-width:768px){.skill-list{grid-template-columns:1fr;}}
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <nav>
+        <div class="nav-box">
+            <div class="logo">杜斌个人主页</div>
+            <div class="nav-a">
+                <a href="index.html">首页</a>
+                <a href="about.html">个人简介</a>
+                <a href="study.html">学习经历</a>
+                <a href="skill.html">专业技能</a>
+                <a href="project.html">项目作品</a>
+                <a href="honor.html">荣誉奖项</a>
+                <a href="life.html">生活日常</a>
+                <a href="message.html">留言板块</a>
+                <a href="contact.html">联系方式</a>
+                <a href="login.html">个人中心</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>专业技能</h2>
+        <!-- 技能专属配图 -->
+        <img src="https://picsum.photos/id/180/1000/350" alt="技术技能展示" class="skill-top-img">
+        <div class="skill-list">
+            <div class="skill-item">
+                <h3>HTML5 页面搭建能力</h3>
+                <p>不断学习掌握HTML5语义化标签，能够规范搭建多页面网站结构，精通页面布局划分、模块拆分、导航栏、内容区、页脚等完整结构搭建，代码整洁规范，符合移动端开发标准，可独立完成整套网站页面架构。</p>
+            </div>
+            <div class="skill-item">
+                <h3>CSS3 高级视觉设计</h3>
+                <p>努力学习CSS3所有常用高级样式，包含渐变背景、圆角、阴影、毛玻璃磨砂特效、过渡动画、悬浮交互、缩放效果、边框光影等。熟练制作暗黑科技风、简约高级风界面，掌握响应式布局，完美适配手机、电脑端。</p>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript 基础交互开发</h3>
+                <p>基本掌握原生JS基础语法与DOM操作，可实现表单验证、动态文字修改、页面交互反馈、点击事件、弹窗效果等基础动态功能，为静态页面增加动态交互体验，提升网站整体高级感与实用性。</p>
+            </div>
+            <div class="skill-item">
+                <h3>移动端专属开发能力</h3>
+                <p>熟悉移动端视口适配、屏幕适配、移动端布局优化，了解移动应用UI设计规范，擅长制作轻量化、高适配、高颜值的移动端展示页面，契合移动应用开发课程培养方向。</p>
+            </div>
+            <div class="skill-item">
+                <h3>网页调试与优化</h3>
+                <p>熟练使用VS Code进行项目开发，掌握网页BUG调试、样式兼容优化、代码精简、页面加载优化等能力，保证项目运行流畅、无错乱、兼容性强。</p>
+            </div>
+            <div class="skill-item">
+                <h3>多页面网站整合开发</h3&gt>
+                <p>具备完整的多页面网站搭建经验，可实现页面统一风格、互相跳转、样式同步、结构统一，能够独立完成课程要求的综合型个人网站项目。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
